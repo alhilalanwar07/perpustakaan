@@ -1,0 +1,7 @@
+{
+  "name": "bukuKu",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
