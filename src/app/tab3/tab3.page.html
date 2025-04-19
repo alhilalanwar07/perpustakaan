@@ -18,7 +18,8 @@
   <!-- Books Grid -->
   <div class="books-grid">
     <ion-card *ngFor="let book of filterBooks()" class="book-card">
-      <div class="book-cover" [style.backgroundImage]="'url(' + book.coverUrl + ')'">
+      <div class="book-cover" [style.backgroundImage]="book.coverUrl ? 'url(' + book.coverUrl + ')' : 
+      'url(https://api.dicebear.com/7.x/shapes/svg?seed=' + book.title + '&backgroundColor=c7d2fe)'">
         <div class="availability-badge" [class.available]="book.available">
           {{ book.available ? 'Tersedia' : 'Dipinjam' }}
         </div>

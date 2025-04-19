@@ -1,0 +1,50 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: var(--app-background);
+}
+
+ion-card {
+  width: 90%;
+  max-width: 400px;
+  margin: auto;
+  box-shadow: var(--card-shadow);
+  border-radius: var(--border-radius);
+}
+
+ion-card-title {
+  text-align: center;
+  font-size: 1.5em;
+  color: var(--ion-color-primary);
+}
+
+ion-item {
+  margin-bottom: 1rem;
+  --background: var(--ion-color-light);
+  --border-radius: var(--border-radius);
+}
+
+ion-button {
+  --border-radius: var(--border-radius);
+  height: 46px;
+  margin-bottom: 1rem;
+}
+
+ion-spinner {
+  margin-top: 1rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ion-text a {
+  text-decoration: none;
+  color: var(--ion-color-secondary);
+}
+
+ion-text p {
+  margin-top: 1rem;
+  text-align: center;
+}

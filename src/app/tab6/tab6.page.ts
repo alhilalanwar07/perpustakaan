@@ -6,7 +6,9 @@ import { IonicModule } from '@ionic/angular';
   selector: 'app-tab6',
   templateUrl: './tab6.page.html',
   styleUrls: ['./tab6.page.scss'],
-  standalone: false,
+  standalone: true,
+  imports: [IonicModule, CommonModule]
+
 })
 export class Tab6Page {
   memberDetails = {

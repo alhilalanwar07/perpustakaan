@@ -1,60 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { IonicModule } from '@ionic/angular';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { DatabaseService } from '../services/database.service';
 
 @Component({
   selector: 'app-tab3',
   templateUrl: 'tab3.page.html',
   styleUrls: ['tab3.page.scss'],
-  standalone: false,
+  standalone: true,
+  imports: [IonicModule, CommonModule, FormsModule]
 })
-export class Tab3Page {
+export class Tab3Page implements OnInit {
   searchTerm: string = '';
   selectedCategory: string = 'all';
+  books: any[] = [];
   
-  books = [
-    {
-      id: 1,
-      title: 'Clean Code',
-      author: 'Robert C. Martin',
-      category: 'Programming',
-      icon: 'code-slash-outline',
-      color: 'primary',
-      available: true,
-      coverUrl: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c',
-      totalCopies: 3,
-      availableCopies: 2,
-      description: 'A Handbook of Agile Software Craftsmanship',
-      rating: 4.8
-    },
-    {
-      id: 2,
-      title: 'Design Patterns',
-      author: 'Erich Gamma et al.',
-      category: 'Programming',
-      icon: 'construct-outline',
-      color: 'success',
-      available: true,
-      coverUrl: 'https://images.unsplash.com/photo-1516259762381-22954d7d3ad2',
-      totalCopies: 2,
-      availableCopies: 0,
-      description: 'Elements of Reusable Object-Oriented Software',
-      rating: 4.7
-    },
-    {
-      id: 3,
-      title: 'Database Systems',
-      author: 'Thomas Connolly',
-      category: 'Database',
-      icon: 'server-outline',
-      color: 'warning',
-      available: false,
-      coverUrl: 'https://images.unsplash.com/photo-1544383835-bda2bc66a55d',
-      totalCopies: 4,
-      availableCopies: 1,
-      description: 'A Practical Approach to Design, Implementation, and Management',
-      rating: 4.5
-    }
-  ];
-
+  // Add categories property
   categories = [
     { id: 'all', name: 'Semua' },
     { id: 'Programming', name: 'Pemrograman' },
@@ -62,6 +24,30 @@ export class Tab3Page {
     { id: 'Network', name: 'Jaringan' }
   ];
 
+  constructor(private dbService: DatabaseService) {}
+
+  async ngOnInit() {
+    await this.loadBooks();
+  }
+
+  async loadBooks() {
+    try {
+      this.books = await this.dbService.getBooks();
+    } catch (error) {
+      console.error('Error loading books:', error);
+    }
+  }
+
+  async addNewBook(bookData: any) {
+    try {
+      await this.dbService.addBook(bookData);
+      await this.loadBooks();
+    } catch (error) {
+      console.error('Error adding book:', error);
+    }
+  }
+
+  // Add getAvailabilityPercent method
   getAvailabilityPercent(book: any): number {
     return Math.round((book.availableCopies / book.totalCopies) * 100);
   }
