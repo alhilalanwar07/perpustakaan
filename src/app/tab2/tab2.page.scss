@@ -1,0 +1,52 @@
+ion-avatar {
+  background: #f4f5f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ion-icon {
+  font-size: 24px;
+}
+
+.filter-segment {
+  margin-bottom: 16px;
+}
+
+ion-fab {
+  z-index: 10;
+}
+
+ion-item-divider {
+  --background: var(--ion-color-light, #f4f5f8);
+  --color: var(--ion-color-medium-shade, #737373);
+  font-weight: bold;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  // Make it sticky
+  position: sticky;
+  top: 0; // Adjust based on your header height if needed
+  z-index: 2;
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh; // Adjust as needed
+  text-align: center;
+  color: var(--ion-color-medium);
+
+  ion-icon {
+    font-size: 64px; // Make icon larger
+    margin-bottom: 16px;
+    color: var(--ion-color-medium-tint);
+  }
+
+  p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+  }
+}

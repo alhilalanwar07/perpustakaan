@@ -1,17 +1,60 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Peminjaman</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" class="ion-padding">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
+      <ion-title size="large">Peminjaman</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <!-- Search Bar -->
+  <ion-searchbar placeholder="Cari buku" [(ngModel)]="searchTerm" (ionChange)="searchBooks()"></ion-searchbar>
+
+  <!-- Filter Segment -->
+  <ion-segment [(ngModel)]="selectedFilter" (ionChange)="filterChanged($event)" class="ion-margin-bottom">
+    <ion-segment-button value="active">
+      <ion-label>Aktif</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="pending">
+      <ion-label>Menunggu</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="history">
+      <ion-label>Riwayat</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <!-- Book List -->
+  <ion-list>
+    <ion-item *ngFor="let book of filteredBooks" class="book-item">
+      <ion-thumbnail slot="start">
+        <ion-icon [name]="book.icon" size="large"></ion-icon>
+      </ion-thumbnail>
+      <ion-label>
+        <h2>{{ book.title }}</h2>
+        <p>{{ book.author }}</p>
+        <p>Tanggal Pinjam: {{ book.borrowDate | date:'dd MMM yyyy' }}</p>
+        <p>Jatuh Tempo: {{ book.dueDate | date:'dd MMM yyyy' }}</p>
+      </ion-label>
+      <ion-badge [color]="book.status === 'active' ? 'primary' : (book.status === 'pending' ? 'warning' : 'success')" slot="end">
+        {{ book.status === 'active' ? 'Dipinjam' : (book.status === 'pending' ? 'Menunggu' : 'Selesai') }}
+      </ion-badge>
+    </ion-item>
+  </ion-list>
+
+  <!-- Empty State -->
+  <div *ngIf="filteredBooks.length === 0" class="ion-text-center ion-padding">
+    <ion-icon name="book-outline" size="large"></ion-icon>
+    <p>Tidak ada buku yang {{ selectedFilter === 'active' ? 'dipinjam' : (selectedFilter === 'pending' ? 'menunggu' : 'dalam riwayat') }}</p>
+  </div>
+
+  <!-- FAB Button -->
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="addNewBorrowing()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>

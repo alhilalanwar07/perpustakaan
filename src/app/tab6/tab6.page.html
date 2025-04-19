@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Dashboard</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="dashboard-container ion-padding">
+    <!-- Member Profile Card -->
+    <ion-card class="profile-card">
+      <ion-card-content>
+        <div class="profile-header">
+          <ion-avatar>
+            <ion-icon name="person-circle-outline"></ion-icon>
+          </ion-avatar>
+          <div class="profile-info">
+            <h2>{{ memberDetails.name }}</h2>
+            <p>ID: {{ memberDetails.memberId }}</p>
+            <p>Bergabung: {{ memberDetails.joinDate }}</p>
+            <ion-badge color="success">{{ memberDetails.status }}</ion-badge>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <!-- Statistics Row -->
+    <div class="stats-row">
+      <div class="stat-card" *ngFor="let stat of activityStats">
+        <ion-icon [name]="stat.icon"></ion-icon>
+        <div class="stat-value">{{ stat.value }}</div>
+        <div class="stat-label">{{ stat.label }}</div>
+      </div>
+    </div>
+
+    <!-- Recent Activities -->
+    <div class="dashboard-info">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Aktivitas Terbaru</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-list>
+            <ion-item *ngFor="let activity of recentActivities">
+              <ion-icon 
+                [name]="activity.type === 'borrow' ? 'arrow-forward-circle-outline' : 
+                       (activity.type === 'return' ? 'checkmark-circle-outline' : 'alert-circle-outline')"
+                [color]="activity.status === 'active' ? 'primary' : 
+                        (activity.status === 'completed' ? 'success' : 'danger')"
+                slot="start">
+              </ion-icon>
+              <ion-label>
+                <h3>{{ activity.bookTitle }}</h3>
+                <p>{{ activity.date }}</p>
+              </ion-label>
+              <ion-badge 
+                [color]="activity.status === 'active' ? 'primary' : 
+                        (activity.status === 'completed' ? 'success' : 'danger')"
+                slot="end">
+                {{ activity.status }}
+              </ion-badge>
+            </ion-item>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+</ion-content>

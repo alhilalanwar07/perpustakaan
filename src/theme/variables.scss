@@ -1,2 +1,349 @@
 // For information on how to create your own theme, please see:
 // http://ionicframework.com/docs/theming/
+
+// Ionic Variables and Theming
+// --------------------------------------------------
+// Custom color palette for your app
+// For more information: https://ionicframework.com/docs/theming/colors
+
+:root {
+  // Primary color - main brand color
+  --ion-color-primary: #4CAF50;
+  --ion-color-primary-rgb: 76, 175, 80;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast-rgb: 255, 255, 255;
+  --ion-color-primary-shade: #43a047;
+  --ion-color-primary-tint: #5eb762;
+
+  // Secondary color - for accents and highlights
+  --ion-color-secondary: #2196F3;
+  --ion-color-secondary-rgb: 33, 150, 243;
+  --ion-color-secondary-contrast: #ffffff;
+  --ion-color-secondary-contrast-rgb: 255, 255, 255;
+  --ion-color-secondary-shade: #1d88e5;
+  --ion-color-secondary-tint: #37a1f4;
+
+  // Tertiary color - for special elements
+  --ion-color-tertiary: #673AB7;
+  --ion-color-tertiary-rgb: 103, 58, 183;
+  --ion-color-tertiary-contrast: #ffffff;
+  --ion-color-tertiary-contrast-rgb: 255, 255, 255;
+  --ion-color-tertiary-shade: #5b34a1;
+  --ion-color-tertiary-tint: #7649be;
+
+  // Success color - for positive actions/notifications
+  --ion-color-success: #4CAF50;
+  --ion-color-success-rgb: 76, 175, 80;
+  --ion-color-success-contrast: #ffffff;
+  --ion-color-success-contrast-rgb: 255, 255, 255;
+  --ion-color-success-shade: #43a047;
+  --ion-color-success-tint: #5eb762;
+
+  // Warning color - for caution notifications
+  --ion-color-warning: #FFC107;
+  --ion-color-warning-rgb: 255, 193, 7;
+  --ion-color-warning-contrast: #000000;
+  --ion-color-warning-contrast-rgb: 0, 0, 0;
+  --ion-color-warning-shade: #e0aa06;
+  --ion-color-warning-tint: #ffc720;
+
+  // Danger color - for negative actions/notifications
+  --ion-color-danger: #F44336;
+  --ion-color-danger-rgb: 244, 67, 54;
+  --ion-color-danger-contrast: #ffffff;
+  --ion-color-danger-contrast-rgb: 255, 255, 255;
+  --ion-color-danger-shade: #d73a2f;
+  --ion-color-danger-tint: #f5554a;
+
+  // Dark color - for dark elements
+  --ion-color-dark: #212121;
+  --ion-color-dark-rgb: 33, 33, 33;
+  --ion-color-dark-contrast: #ffffff;
+  --ion-color-dark-contrast-rgb: 255, 255, 255;
+  --ion-color-dark-shade: #1d1d1d;
+  --ion-color-dark-tint: #383838;
+
+  // Medium color - for medium contrast elements
+  --ion-color-medium: #757575;
+  --ion-color-medium-rgb: 117, 117, 117;
+  --ion-color-medium-contrast: #ffffff;
+  --ion-color-medium-contrast-rgb: 255, 255, 255;
+  --ion-color-medium-shade: #676767;
+  --ion-color-medium-tint: #838383;
+
+  // Light color - for light elements
+  --ion-color-light: #F5F5F5;
+  --ion-color-light-rgb: 245, 245, 245;
+  --ion-color-light-contrast: #000000;
+  --ion-color-light-contrast-rgb: 0, 0, 0;
+  --ion-color-light-shade: #d8d8d8;
+  --ion-color-light-tint: #f6f6f6;
+
+  // Custom colors for financial app
+  --ion-color-income: #4CAF50;
+  --ion-color-income-rgb: 76, 175, 80;
+  --ion-color-income-contrast: #ffffff;
+  --ion-color-income-contrast-rgb: 255, 255, 255;
+  --ion-color-income-shade: #43a047;
+  --ion-color-income-tint: #5eb762;
+
+  --ion-color-expense: #F44336;
+  --ion-color-expense-rgb: 244, 67, 54;
+  --ion-color-expense-contrast: #ffffff;
+  --ion-color-expense-contrast-rgb: 255, 255, 255;
+  --ion-color-expense-shade: #d73a2f;
+  --ion-color-expense-tint: #f5554a;
+
+  // App specific variables
+  --app-background: #f8f9fa;
+  --card-background: #ffffff;
+  --card-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --border-radius: 10px;
+  --chart-grid-color: #e0e0e0;
+  --progress-background: #e0e0e0;
+}
+
+// Dark theme
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ion-color-primary: #81C784;
+    --ion-color-primary-rgb: 129, 199, 132;
+    --ion-color-primary-contrast: #000000;
+    --ion-color-primary-contrast-rgb: 0, 0, 0;
+    --ion-color-primary-shade: #72b074;
+    --ion-color-primary-tint: #8ecd90;
+
+    --ion-color-secondary: #64B5F6;
+    --ion-color-secondary-rgb: 100, 181, 246;
+    --ion-color-secondary-contrast: #000000;
+    --ion-color-secondary-contrast-rgb: 0, 0, 0;
+    --ion-color-secondary-shade: #589fd8;
+    --ion-color-secondary-tint: #74bcf7;
+
+    --ion-color-tertiary: #9575CD;
+    --ion-color-tertiary-rgb: 149, 117, 205;
+    --ion-color-tertiary-contrast: #000000;
+    --ion-color-tertiary-contrast-rgb: 0, 0, 0;
+    --ion-color-tertiary-shade: #8367b4;
+    --ion-color-tertiary-tint: #a083d2;
+
+    --ion-color-success: #81C784;
+    --ion-color-success-rgb: 129, 199, 132;
+    --ion-color-success-contrast: #000000;
+    --ion-color-success-contrast-rgb: 0, 0, 0;
+    --ion-color-success-shade: #72b074;
+    --ion-color-success-tint: #8ecd90;
+
+    --ion-color-warning: #FFD54F;
+    --ion-color-warning-rgb: 255, 213, 79;
+    --ion-color-warning-contrast: #000000;
+    --ion-color-warning-contrast-rgb: 0, 0, 0;
+    --ion-color-warning-shade: #e0bb46;
+    --ion-color-warning-tint: #ffd961;
+
+    --ion-color-danger: #E57373;
+    --ion-color-danger-rgb: 229, 115, 115;
+    --ion-color-danger-contrast: #000000;
+    --ion-color-danger-contrast-rgb: 0, 0, 0;
+    --ion-color-danger-shade: #ca6565;
+    --ion-color-danger-tint: #e88181;
+
+    --ion-color-dark: #f4f5f8;
+    --ion-color-dark-rgb: 244, 245, 248;
+    --ion-color-dark-contrast: #000000;
+    --ion-color-dark-contrast-rgb: 0, 0, 0;
+    --ion-color-dark-shade: #d7d8da;
+    --ion-color-dark-tint: #f5f6f9;
+
+    --ion-color-medium: #989aa2;
+    --ion-color-medium-rgb: 152, 154, 162;
+    --ion-color-medium-contrast: #000000;
+    --ion-color-medium-contrast-rgb: 0, 0, 0;
+    --ion-color-medium-shade: #86888f;
+    --ion-color-medium-tint: #a2a4ab;
+
+    --ion-color-light: #222428;
+    --ion-color-light-rgb: 34, 36, 40;
+    --ion-color-light-contrast: #ffffff;
+    --ion-color-light-contrast-rgb: 255, 255, 255;
+    --ion-color-light-shade: #1e2023;
+    --ion-color-light-tint: #383a3e;
+
+    --ion-color-income: #81C784;
+    --ion-color-income-rgb: 129, 199, 132;
+    --ion-color-income-contrast: #000000;
+    --ion-color-income-contrast-rgb: 0, 0, 0;
+    --ion-color-income-shade: #72b074;
+    --ion-color-income-tint: #8ecd90;
+
+    --ion-color-expense: #E57373;
+    --ion-color-expense-rgb: 229, 115, 115;
+    --ion-color-expense-contrast: #000000;
+    --ion-color-expense-contrast-rgb: 0, 0, 0;
+    --ion-color-expense-shade: #ca6565;
+    --ion-color-expense-tint: #e88181;
+
+    // App specific variables for dark mode
+    --app-background: #121212;
+    --card-background: #1e1e1e;
+    --card-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    --chart-grid-color: #333333;
+    --progress-background: #333333;
+  }
+}
+
+// Custom color classes
+.ion-color-income {
+  --ion-color-base: var(--ion-color-income);
+  --ion-color-base-rgb: var(--ion-color-income-rgb);
+  --ion-color-contrast: var(--ion-color-income-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-income-contrast-rgb);
+  --ion-color-shade: var(--ion-color-income-shade);
+  --ion-color-tint: var(--ion-color-income-tint);
+}
+
+.ion-color-expense {
+  --ion-color-base: var(--ion-color-expense);
+  --ion-color-base-rgb: var(--ion-color-expense-rgb);
+  --ion-color-contrast: var(--ion-color-expense-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-expense-contrast-rgb);
+  --ion-color-shade: var(--ion-color-expense-shade);
+  --ion-color-tint: var(--ion-color-expense-tint);
+}
+
+// Global app styling
+body {
+  background-color: var(--app-background);
+}
+
+// Card styling
+ion-card {
+  border-radius: var(--border-radius);
+  background: var(--card-background);
+  box-shadow: var(--card-shadow);
+  margin: 12px;
+}
+
+ion-card-header {
+  padding-bottom: 8px;
+}
+
+ion-card-title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+// List styling
+ion-item {
+  --padding-start: 16px;
+  --padding-end: 16px;
+  --padding-top: 12px;
+  --padding-bottom: 12px;
+}
+
+// Progress bar styling
+.progress-bar {
+  height: 8px;
+  border-radius: 4px;
+  background-color: var(--progress-background);
+  overflow: hidden;
+  margin: 8px 0;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 4px;
+}
+
+// Chart styling
+.chart-container {
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+// FAB styling
+ion-fab-button {
+  --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+// Custom animations
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+// Dashboard specific styles
+.dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  padding: 0 12px;
+}
+
+.stat-card {
+  padding: 16px;
+  border-radius: var(--border-radius);
+  background: var(--card-background);
+  box-shadow: var(--card-shadow);
+}
+
+.stat-value {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 8px 0;
+}
+
+.stat-label {
+  font-size: 14px;
+  color: var(--ion-color-medium);
+}
+
+// Transaction list styling
+.transaction-item {
+  --border-radius: 8px;
+  margin: 8px 0;
+}
+
+.transaction-amount {
+  font-weight: 600;
+}
+
+.income-amount {
+  color: var(--ion-color-income);
+}
+
+.expense-amount {
+  color: var(--ion-color-expense);
+}
+
+// Budget styling
+.budget-progress {
+  margin: 12px 0;
+}
+
+.budget-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4px;
+}
+
+// Report styling
+.report-section {
+  margin-bottom: 24px;
+}
+
+.export-button {
+  margin: 16px;
+}
+
+// font Poppins
+// Font Poppins
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --ion-font-family: 'Poppins', sans-serif;
+}

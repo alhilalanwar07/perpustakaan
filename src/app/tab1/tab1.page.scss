@@ -1,0 +1,328 @@
+// Dashboard styling
+.balance-container {
+  padding: 10px 0;
+}
+
+.balance-amount {
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.balance-details {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.income-container, .expense-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 48%;
+}
+
+.income-label, .expense-label {
+  font-size: 14px;
+  color: var(--ion-color-medium);
+  margin-bottom: 4px;
+}
+
+.income-amount {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--ion-color-income);
+}
+
+.expense-amount {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--ion-color-expense);
+}
+
+// Chart styling
+.chart-container {
+  height: 250px;
+  width: 100%;
+  margin: 10px 0;
+}
+
+// Top expense category styling
+.top-expense {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.category-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--ion-color-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 16px;
+}
+
+.category-icon ion-icon {
+  font-size: 24px;
+}
+
+.category-details {
+  flex: 1;
+}
+
+.category-name {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.category-amount {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--ion-color-expense);
+}
+
+.no-expense {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+  color: var(--ion-color-medium);
+}
+
+.no-expense ion-icon {
+  font-size: 24px;
+  margin-right: 8px;
+}
+
+// Recent transactions styling
+.transaction-item {
+  --padding-start: 0;
+  --inner-padding-end: 0;
+  margin-bottom: 8px;
+}
+
+ion-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.income-avatar {
+  background-color: rgba(76, 175, 80, 0.1);
+}
+
+.expense-avatar {
+  background-color: rgba(244, 67, 54, 0.1);
+}
+
+ion-avatar ion-icon {
+  font-size: 20px;
+}
+
+ion-note {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+// Card header with button
+ion-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ion-card-header ion-button {
+  margin: 0;
+}
+
+// Add styling for the period segment
+.period-segment {
+  margin-bottom: 16px; // Add some space below the segment
+}
+
+// Balance styling
+.balance-container {
+  padding: 10px 0;
+}
+
+.balance-amount {
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.balance-details {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.income-container, .expense-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 48%;
+}
+
+.income-label, .expense-label {
+  font-size: 14px;
+  color: var(--ion-color-medium);
+  margin-bottom: 4px;
+}
+
+.income-amount {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--ion-color-income);
+}
+
+.expense-amount {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--ion-color-expense);
+}
+
+// Chart styling
+.chart-container {
+  height: 250px;
+  width: 100%;
+  margin: 10px 0;
+}
+
+// Top expense category styling
+.top-expense {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.category-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--ion-color-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 16px;
+}
+
+.category-icon ion-icon {
+  font-size: 24px;
+}
+
+.category-details {
+  flex: 1;
+}
+
+.category-name {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.category-amount {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--ion-color-expense);
+}
+
+.no-expense {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+  color: var(--ion-color-medium);
+}
+
+.no-expense ion-icon {
+  font-size: 24px;
+  margin-right: 8px;
+}
+
+// Recent transactions styling
+.transaction-item {
+  --padding-start: 0;
+  --inner-padding-end: 0;
+  margin-bottom: 8px;
+}
+
+ion-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.income-avatar {
+  background-color: rgba(76, 175, 80, 0.1);
+}
+
+.expense-avatar {
+  background-color: rgba(244, 67, 54, 0.1);
+}
+
+ion-avatar ion-icon {
+  font-size: 20px;
+}
+
+ion-note {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+// Card header with button
+ion-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ion-card-header ion-button {
+  margin: 0;
+}
+
+ion-content {
+  --background: var(--ion-color-light);
+}
+
+.book-item {
+  margin-bottom: 8px;
+  border-radius: 8px;
+  --background: var(--ion-color-light);
+}
+
+ion-thumbnail {
+  --size: 56px;
+  --border-radius: 8px;
+  background: var(--ion-color-primary-contrast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  ion-icon {
+    font-size: 32px;
+    color: var(--ion-color-primary);
+  }
+}
+
+ion-badge {
+  padding: 8px 12px;
+  border-radius: 16px;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 32px;
+  color: var(--ion-color-medium);
+
+  ion-icon {
+    font-size: 48px;
+    margin-bottom: 16px;
+  }
+}
